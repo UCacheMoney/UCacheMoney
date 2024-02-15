@@ -1,8 +1,8 @@
 
-# UCashMoney
-UCashMoney allows for users to have an easier banking experience. UCashMoney lets users connect their bank account to manage spending, set budgets, and give updates about spending and budget goals.
+# UCacheMoney
+UCacheMoney allows for users to have an easier banking experience. UCacheMoney lets users connect their bank account to manage spending, set budgets, and give updates about spending and budget goals.
 
-### What You Can Do With UCashMoney
+### What You Can Do With UCacheMoney
  - Set limits on spending
  - Visualize spending habits over a certain time
  - Notify users when they are approaching their budget 
@@ -11,7 +11,7 @@ UCashMoney allows for users to have an easier banking experience. UCashMoney let
 ### How to Use
 First clone the GitHub Repository
 ```
-git clone https://github.com/Athenaphilia/UCashMoney.git
+git clone https://github.com/Athenaphilia/UCacheMoney.git
 ```
 Then type 
 ```
