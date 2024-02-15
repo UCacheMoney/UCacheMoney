@@ -9,7 +9,7 @@ UCashMoney allows for users to have an easier banking experience. UCashMoney let
  - Organize transactions by category 
  - Set a username and password
 ### How to Use
-First clone the GitHub Reporsitory
+First clone the GitHub Repository
 ```
 git clone https://github.com/Athenaphilia/UCashMoney.git
 ```
