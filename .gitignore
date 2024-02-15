@@ -6,4 +6,6 @@ desktop.ini
 
 # Python Generated
 __pycache__/
-*.sqlite3
+
+# Database
+backend/db.sqlite3
