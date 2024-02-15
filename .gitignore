@@ -6,3 +6,4 @@ desktop.ini
 
 # Python Generated
 __pycache__/
+*.sqlite3
