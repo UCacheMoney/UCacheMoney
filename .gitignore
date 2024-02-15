@@ -1,2 +1,8 @@
 desktop.ini
 .DS_Store
+
+# Django Stuff
+*.log
+
+# Python Generated
+__pycache__/
