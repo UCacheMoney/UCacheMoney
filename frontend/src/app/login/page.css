@@ -1,0 +1,15 @@
+html, body .login_page { 
+    padding:0%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;}
+
+h1 {text-align: center;}
+.form input{
+    text-align: center;
+}
+.form label {
+    text-align: center;
+}
