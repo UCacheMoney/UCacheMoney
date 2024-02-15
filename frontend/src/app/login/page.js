@@ -2,7 +2,7 @@ import "./page.css";
 
 export default function login(){
     return( 
-        <div class="login_page">
+        <div className="login_page">
             <form>
                 <center>
                 <h1>Log In</h1>
