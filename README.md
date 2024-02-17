@@ -41,11 +41,16 @@ py manage.py runserver
 
 ### Documents
 
-User Stories Document: https://docs.google.com/document/d/1NxMeZiN6YVAqbtXbeFMkOdoJihsm9GbF6HwnRRQbW4o/edit?usp=sharing
-SRS Document: https://docs.google.com/document/d/1NxMeZiN6YVAqbtXbeFMkOdoJihsm9GbF6HwnRRQbW4o/edit?usp=sharing
-Genral Overview: https://docs.google.com/document/d/1LzCNA0ghvf35a_ousWIhqGxSMrdQHxF9qWZdXXDsp2A/edit?usp=sharing
-Product Backlog: https://docs.google.com/spreadsheets/d/1B0ROaNWCcYXQJFtDmBq3dkEd729iXnHrc0MA3zfctGY/edit?usp=sharing
-Kanban Board: https://ucachemoney.atlassian.net/jira/software/projects/UC/boards/1
+[User Stories Document](https://docs.google.com/document/d/1NxMeZiN6YVAqbtXbeFMkOdoJihsm9GbF6HwnRRQbW4o/edit?usp=sharing)
+
+[SRS Document](https://docs.google.com/document/d/1NxMeZiN6YVAqbtXbeFMkOdoJihsm9GbF6HwnRRQbW4o/edit?usp=sharing)
+
+[Genral Overview](https://docs.google.com/document/d/1LzCNA0ghvf35a_ousWIhqGxSMrdQHxF9qWZdXXDsp2A/edit?usp=sharing)
+
+[Product Backlog](https://docs.google.com/spreadsheets/d/1B0ROaNWCcYXQJFtDmBq3dkEd729iXnHrc0MA3zfctGY/edit?usp=sharing)
+
+[Kanban Board](https://ucachemoney.atlassian.net/jira/software/projects/UC/boards/1)
 
 #### Sprint Reviews
-1. https://docs.google.com/document/d/1S-Inb7vUO44_-xs_tV-LM6QJpmTzbaJD1HKaGt4Isag/edit?usp=sharing
+
+[1](https://docs.google.com/document/d/1S-Inb7vUO44_-xs_tV-LM6QJpmTzbaJD1HKaGt4Isag/edit?usp=sharing)
