@@ -43,7 +43,7 @@ py manage.py runserver
 
 [User Stories Document](https://docs.google.com/document/d/1NxMeZiN6YVAqbtXbeFMkOdoJihsm9GbF6HwnRRQbW4o/edit?usp=sharing)
 
-[SRS Document](https://docs.google.com/document/d/1NxMeZiN6YVAqbtXbeFMkOdoJihsm9GbF6HwnRRQbW4o/edit?usp=sharing)
+[SRS Document](https://docs.google.com/document/d/14fgQ0AwsQVTAxBBHwCJlFB6ag8yT-BruFjg6DEkIlVU/edit?usp=sharing)
 
 [Genral Overview](https://docs.google.com/document/d/1LzCNA0ghvf35a_ousWIhqGxSMrdQHxF9qWZdXXDsp2A/edit?usp=sharing)
 
