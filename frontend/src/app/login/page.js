@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import "./page.css";
 
-loginUrl = process.env.SERVER_API
-
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -14,7 +12,7 @@ export default function Login() {
 
         try {
             // Call the Django backend API to check login
-            const response = await fetch(SERVER_API + "/auth/login", {
+            const response = await fetch('http://localhost:8000/auth/login/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,7 +23,7 @@ export default function Login() {
             const data = await response.json();
 
             if (data.success) {
-                // Redirect to the home page or perform any other actions upon successful login
+                // Successful login
                 console.log('Login successful!');
             } else {
                 // Handle login failure, show error message, etc.
