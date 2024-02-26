@@ -13,6 +13,14 @@ export default function login(){
       <h3>How do I reset my password?</h3>
       <p>To reset your password, go to the login page and click on the "Forgot Password" link. Follow the instructions provided to reset your password.</p>
     </div>
+    <div>
+      <h3>
+        How do I view my Balance?
+      </h3>
+      <p>
+        To view your balance, press the dashboard button on the navigation bar and your balance should appear.
+      </p>
+    </div>
     <div className="question">
       <h3>How can I contact customer support?</h3>
       <p>You can contact our customer support team by emailing support@example.com or by calling 1-800-123-4567.</p>
