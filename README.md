@@ -30,7 +30,7 @@ Change directory into the backend `cd backend` then:
 
 Unix:
 ```
-python -m pip install -r requirements.tx
+python -m pip install -r requirements.txt
 python manage.py runserver
 ```
 Windows:
