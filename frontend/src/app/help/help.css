@@ -30,3 +30,27 @@ body {
   .question h3 {
     margin-bottom: 5px;
   }
+.column2 {
+  flex: 30%;
+  height: 100%;
+  padding: 10px;
+  margin: 5px;
+  background-color: #ff0000;
+  text-align: center;
+}
+
+.column2 {
+  flex: 40%;
+  height: 100%;
+  padding: 10px;
+  margin: 5px;
+  background-color: #000000;
+  text-align: center;
+}
+.container {
+  display: flex;
+}
+.justified {
+  display: flex;
+  justify-content: center;
+}
