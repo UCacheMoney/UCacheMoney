@@ -2,6 +2,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
+from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
 import json
 
@@ -47,3 +48,17 @@ def signup(request):
         except:
             return JsonResponse({"success": False})
     return JsonResponse({"error": "Invalid request method"})
+
+
+@require_http_methods(["POST", "OPTIONS"])
+@csrf_exempt
+@login_required
+def reset_password(request):
+    pass
+
+
+@require_http_methods(["POST", "OPTIONS"])
+@csrf_exempt
+@login_required
+def delete_account(request):
+    pass
