@@ -35,7 +35,7 @@ python manage.py runserver
 ```
 Windows:
 ```
-py -m pip install Django
+py -m pip install -r requirements.txt
 py manage.py runserver
 ```
 
