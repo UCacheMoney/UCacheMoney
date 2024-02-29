@@ -31,14 +31,19 @@ def login(request):
 @csrf_exempt
 def signup(request):
     if request.method == "POST":
-        # Parse the JSON data from the request body
-        data = json.loads(request.body.decode("utf-8"))
+        try:
+            # Parse the JSON data from the request body
+            data = json.loads(request.body.decode("utf-8"))
 
-        # Retrieve username and password from the JSON data
-        username = data.get("username")
-        password = data.get("password")
+            # Retrieve username and password from the JSON data
+            username = data.get("username")
+            password = data.get("password")
 
-        # create user with username and password
-        # None is email, could change with time
-        user = User.objects.create_user(username, None, password)
-        user.save()
+            # create user with username and password
+            # None is email, could change with time
+            user = User.objects.create_user(username, None, password)
+            user.save()
+            return JsonResponse({"success": True})
+        except:
+            return JsonResponse({"success": False})
+    return JsonResponse({"error": "Invalid request method"})

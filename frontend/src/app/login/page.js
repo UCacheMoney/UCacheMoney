@@ -34,9 +34,36 @@ export default function Login() {
         }
     };
 
+    const handleSignup = async (e) => {
+        e.preventDefault()
+
+        try {
+            // Call the Django backend API to check login
+            const response = await fetch('http://localhost:8000/auth/signup/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Successful login
+                console.log('Signup successful!');
+            } else {
+                // Handle login failure, show error message, etc.
+                console.log('Signup failed.');
+            }
+        } catch (error) {
+            console.error('Error during signup:', error);
+        }
+    };
+
     return (
         <div className="login_page">
-            <form onSubmit={handleLogin}>
+            <div className='login_form'>
                 <center>
                     <h1>Log In</h1>
 
@@ -46,9 +73,10 @@ export default function Login() {
                     <label htmlFor="password">Password: </label><br />
                     <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} /><br />
 
-                    <input type="submit" value="Log In" />
+                    <button onClick={handleLogin}>Login</button>
+                    <button onClick={handleSignup}>Signup</button>
                 </center>
-            </form>
+            </div>
         </div>
     );
 }
