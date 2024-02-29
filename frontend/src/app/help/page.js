@@ -13,7 +13,6 @@ export default function login(){
     </div>
       <div className = "column2">
       <section id="faq">
-        
         <h2>Frequently Asked Questions</h2>
       <div className="question">
         <h3>How do I reset my password?</h3>
