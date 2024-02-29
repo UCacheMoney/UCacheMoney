@@ -22,3 +22,9 @@ def login(request):
         else:
             return JsonResponse({"success": False})
     return JsonResponse({"error": "Invalid request method"})
+
+
+@require_http_methods(["POST", "OPTIONS"])
+@csrf_exempt
+def signup():
+    pass
