@@ -62,3 +62,10 @@ def reset_password(request):
 @login_required
 def delete_account(request):
     pass
+
+
+@require_http_methods(["POST", "OPTIONS"])
+@csrf_exempt
+@login_required
+def logout(request):
+    pass
