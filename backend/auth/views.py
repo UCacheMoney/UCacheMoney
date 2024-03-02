@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
 import json
@@ -9,7 +9,7 @@ import json
 
 @require_http_methods(["POST", "OPTIONS"])
 @csrf_exempt  # Use csrf_exempt for simplicity; consider using CSRF protection in production
-def login(request):
+def login_user(request):
     if request.method == "POST":
         # Parse the JSON data from the request body
         data = json.loads(request.body.decode("utf-8"))
@@ -22,6 +22,7 @@ def login(request):
         # Replace the following logic with your actual authentication logic
         user = authenticate(username=username, password=password)
         if user is not None:
+            login(request, user)
             return JsonResponse({"success": True})
         else:
             return JsonResponse({"success": False})
