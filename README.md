@@ -63,10 +63,8 @@ py manage.py runserver
 
 [Use Case Models](https://docs.google.com/spreadsheets/d/1r7Wg-WxPTgJbKkrACLDuenPo2CIMZU7mQ8romB3dwV8/edit?usp=sharing)
 
-[Sprint Review 2](https://docs.google.com/document/d/1L69Nvk2YkJ5vmZ2vh3craQO-hxdCcXN3SRD8E6UTM0c/edit?usp=sharing)
-
-
-
 #### Sprint Reviews
 
-[1](https://docs.google.com/document/d/1S-Inb7vUO44_-xs_tV-LM6QJpmTzbaJD1HKaGt4Isag/edit?usp=sharing)
+[Sprint Review 1](https://docs.google.com/document/d/1S-Inb7vUO44_-xs_tV-LM6QJpmTzbaJD1HKaGt4Isag/edit?usp=sharing)
+
+[Sprint Review 2](https://docs.google.com/document/d/1L69Nvk2YkJ5vmZ2vh3craQO-hxdCcXN3SRD8E6UTM0c/edit?usp=sharing)
