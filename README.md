@@ -53,6 +53,20 @@ py manage.py runserver
 
 [Kanban Board](https://ucachemoney.atlassian.net/jira/software/projects/UC/boards/1)
 
+[Software Architecture](https://docs.google.com/document/d/1kkVievL4w0thyH3v6MvUu1tNmIfev0xK9xj8Farmq9g/edit?usp=sharing)
+
+[Diagram 1](https://docs.google.com/drawings/d/1PjRRNEtDnzv8zqqUp-U67hSeJL0HGEgmZKyguk2Ewj4/edit?usp=sharing)
+
+[Diagram 2](https://docs.google.com/drawings/d/1bUWcaJPXKHvPZfrCoygyHk-w5gOwBFlfu9fcUmdJ7JU/edit?usp=sharing)
+
+[Use Case Descriptions](https://docs.google.com/document/d/1mJuGIL1OaP2xNTJvX3snzgPoisSpK0HQskqPQ04nJP4/edit?usp=sharing)
+
+[Use Case Models](https://docs.google.com/spreadsheets/d/1r7Wg-WxPTgJbKkrACLDuenPo2CIMZU7mQ8romB3dwV8/edit?usp=sharing)
+
+[Sprint Review 2](https://docs.google.com/document/d/1L69Nvk2YkJ5vmZ2vh3craQO-hxdCcXN3SRD8E6UTM0c/edit?usp=sharing)
+
+
+
 #### Sprint Reviews
 
 [1](https://docs.google.com/document/d/1S-Inb7vUO44_-xs_tV-LM6QJpmTzbaJD1HKaGt4Isag/edit?usp=sharing)
