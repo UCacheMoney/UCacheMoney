@@ -57,6 +57,8 @@ py manage.py runserver
 
 [Diagram 2](https://docs.google.com/drawings/d/1bUWcaJPXKHvPZfrCoygyHk-w5gOwBFlfu9fcUmdJ7JU/edit?usp=sharing)
 
+[Diagram 3](https://docs.google.com/drawings/d/1jbtbs6Wip2cDHfVfKPKBKF5fKXBWSOWCjc_CO8RZXug/edit)
+
 [Use Case Descriptions](https://docs.google.com/document/d/1mJuGIL1OaP2xNTJvX3snzgPoisSpK0HQskqPQ04nJP4/edit?usp=sharing)
 
 [Use Case Models](https://docs.google.com/spreadsheets/d/1r7Wg-WxPTgJbKkrACLDuenPo2CIMZU7mQ8romB3dwV8/edit?usp=sharing)
