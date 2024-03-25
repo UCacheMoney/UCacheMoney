@@ -5,7 +5,12 @@ export default function login(){
     
 <div className="help-page">
 <header>
-  <h1>Help Page</h1>
+  <h1>Help Page
+  </h1>
+  <button style={{width: "200px", background: "#83f28f"
+    }}>
+      Home
+      </button>
 </header>
 <main>
   <div className = "container">
