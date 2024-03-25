@@ -63,8 +63,14 @@ py manage.py runserver
 
 [Use Case Models](https://docs.google.com/spreadsheets/d/1r7Wg-WxPTgJbKkrACLDuenPo2CIMZU7mQ8romB3dwV8/edit?usp=sharing)
 
+[Domain Models Document](https://docs.google.com/document/d/1PtCjGkK69H1xE3ymrIIweRMRuiXzd1zxuI6dl_Uqj_w/edit)
+
+[Sequence Diagram Document](https://docs.google.com/document/d/1yEh9zV-HIeAe3J5q3g-41aKqhrKk-SvqcYPNLY2LuTc/edit)
+
 #### Sprint Reviews
 
 [Sprint Review 1](https://docs.google.com/document/d/1S-Inb7vUO44_-xs_tV-LM6QJpmTzbaJD1HKaGt4Isag/edit?usp=sharing)
 
 [Sprint Review 2](https://docs.google.com/document/d/1L69Nvk2YkJ5vmZ2vh3craQO-hxdCcXN3SRD8E6UTM0c/edit?usp=sharing)
+
+[Sprint Review 3](https://docs.google.com/document/d/1Yx03uRsbZC9cNapA1ytxfPZ0w0sQEycc7BFE5HC1Hu8/edit)
