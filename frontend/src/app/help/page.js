@@ -1,17 +1,13 @@
 import "./Help.css";
+import React from "react"
+import NavbarComponent from "../NavbarComponent/NavbarComponent"
 
 export default function login(){
     return( 
+      
     
 <div className="help-page">
-<header>
-  <h1>Help Page
-  </h1>
-  <button style={{width: "200px", background: "#83f28f"
-    }}>
-      Home
-      </button>
-</header>
+<NavbarComponent />
 <main>
   <div className = "container">
   <div className = "column1">
@@ -49,7 +45,6 @@ export default function login(){
 
 </div>
   </div>
-
 
  
 </main>
