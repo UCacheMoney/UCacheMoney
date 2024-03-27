@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #83f28f;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    a {
+      color: #221f1f;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  .nav-links {
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+  
+    li {
+      margin-right: 1rem;
+  
+      a {
+        color: #221f1f;
+        text-decoration: none;
+        font-size: 1.2rem;
+  
+        &:hover {
+          color: #221f1f;
+        }
+      }
+    }
+   .title {
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #000000;
+      padding: 30px;
+    }
+  }
