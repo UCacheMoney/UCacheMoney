@@ -11,9 +11,9 @@ const NavbarComponent = () => {
       </a>
       <div>
         <ul id='navbar'>
-          <li><a className='active' href="#"> Home </a> </li>
-          <li><a className='active' href="#"> Account </a> </li>
-          <li><a className = "active" href="#"> Contact </a> </li>
+          <li><a href="#"> Home </a> </li>
+          <li><a href="#"> Account </a> </li>
+          <li><a href="#"> Contact </a> </li>
           <li><a className= "active" href="#"> Help </a> </li>         
         </ul>
       </div>
