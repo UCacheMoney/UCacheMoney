@@ -1,6 +1,6 @@
 import "./Help.css";
 import React from "react"
-import NavbarComponent from "../NavbarComponent/NavbarComponent"
+import NavbarComponent from "../NavbarComponent/NavbarComponent.js"
 
 export default function login(){
     return( 

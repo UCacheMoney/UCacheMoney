@@ -1,27 +1,21 @@
 import React from 'react';
 import './NavbarComponent.css';
-import Logo from "./logo.js"
+import logo from "../images/UCacheLogo.png"
+
 
 const NavbarComponent = () => {
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="logo">
-          <Logo />
-        </div>
-        <div className="nav-links">
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
+    <nav>
+      <a href='#' className='logo_link'>
+        <img src={logo}/>
+      </a>
+      <div>
+        <ul id='navbar'>
+          <li><a className='active' href="#"> Home </a> </li>
+          <li><a className='active' href="#"> Account </a> </li>
+          <li><a className = "active" href="#"> Contact </a> </li>
+          <li><a className= "active" href="#"> Help </a> </li>         
+        </ul>
       </div>
     </nav>
   );
