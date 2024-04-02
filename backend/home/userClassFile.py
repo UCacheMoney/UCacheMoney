@@ -23,7 +23,7 @@ class UserBase():
     def setName(self, name):
         self.name = name
 
-    def setAccoutNumber(self, num):
+    def setAccountNumber(self, num):
         self.accountNumber = num
     
     def setEmail(self, email):
@@ -38,12 +38,12 @@ class UserBase():
 
     def reachingLimit(self):
         self.sendEmail(self.email, "Reaching Spending Limit", 
-        f"You are withen 100$ of your monthly budget. 
+        f"You are within 100$ of your monthly budget. 
         Be careful with your next purchases")
 
     def reachingLimitOnCategory(self, category):
         self.sendEmail(self.email, "Reaching Spending Limit", 
-        f"You are withen 100$ of your monthly budget on {category}. 
+        f"You are within 100$ of your monthly budget on {category}. 
         Be careful with your next purchases")
 
     def hitLimit(self):
