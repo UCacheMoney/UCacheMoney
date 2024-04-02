@@ -38,21 +38,21 @@ class UserBase():
 
     def reachingLimit(self):
         self.sendEmail(self.email, "Reaching Spending Limit", 
-        f"""You are withen 100$ of your monthly budget. 
-        Be careful with your next purchases""")
+        f"You are withen 100$ of your monthly budget. 
+        Be careful with your next purchases")
 
     def reachingLimitOnCategory(self, category):
         self.sendEmail(self.email, "Reaching Spending Limit", 
-        f"""You are withen 100$ of your monthly budget on {category}. 
-        Be careful with your next purchases""")
+        f"You are withen 100$ of your monthly budget on {category}. 
+        Be careful with your next purchases")
 
     def hitLimit(self):
         self.sendEmail(self.email, "Reached Spending Limit", 
-        f"""You hit your overall monthly budget.""")
+        f"You hit your overall monthly budget.")
 
     def hitLimitCategory(self, category):
         self.sendEmail(self.email, "Reached Spending Limit", 
-        f"""You hit your overall monthly budget for {category}.""")
+        f"You hit your overall monthly budget for {category}.")
 
     
 
@@ -79,6 +79,21 @@ class UserBase():
         else:
             #database work to calculate if amount is over limit after transaction
             return True
+        
+    def sendEmail(recipient, subject, message):
+        email = EmailMessage()
+        email['From'] = 'ucashemoney@gmail.com'
+        email['To'] = recipient
+        email['Subject'] = subject
+
+        email.set_content(message)
+
+        context = ssl.create_default_context()
+
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
+            smtp.login('ucashemoney@gmail.com', 'awyn srnh gpan vfkp')
+            smtp.send_message(email)
+
 
     
 
@@ -105,50 +120,35 @@ class Child(UserBase):
     
     def reachingLimit(self):
         self.sendEmail(self.email, "Reaching Spending Limit", 
-        f"""You are withen 100$ of your monthly budget. 
-        Be careful with your next purchases""")
+        f"You are within 100$ of your monthly budget. 
+        Be careful with your next purchases")
 
         self.sendEmail((self.parent).getEmail(), "Child Is Reaching Spending Limit", 
-        f"""Your child is withen 100$ of their monthly budget. """)
+        f"Your child is within 100$ of their monthly budget. ")
 
 
     def reachingLimitOnCategory(self, category):
         self.sendEmail(self.email, "Reaching Spending Limit", 
-        f"""You are withen 100$ of your monthly budget on {category}. 
-        Be careful with your next purchases""")
+        f"You are within 100$ of your monthly budget on {category}. 
+        Be careful with your next purchases")
 
         self.sendEmail((self.parent).getEmail(), "Reaching Spending Limit", 
-        f"""Your child is withen 100$ of their monthly budget on {category}. """)
+        f"Your child is within 100$ of their monthly budget on {category}. ")
 
 
     def hitLimit(self):
         self.sendEmail(self.email, "Reached Spending Limit", 
-        f"""You hit your overall monthly budget.""")
+        f"You hit your overall monthly budget.")
 
         self.sendEmail((self.parent).getEmail(), "Reached Spending Limit", 
-        f"""Your child hit their overall monthly budget.""")
+        f"Your child hit their overall monthly budget.")
 
     def hitLimitCategory(self, category):
         self.sendEmail(self.email, "Reached Spending Limit", 
-        f"""You hit your overall monthly budget for {category}.""")
+        f"You hit your overall monthly budget for {category}.")
 
         self.sendEmail((self.parent).getEmail(), "Reached Spending Limit", 
-        f"""Your child hit your overall monthly budget for {category}.""")
-
-    def sendEmail(recipient, subject, message):
-        email = EmailMessage()
-        email['From'] = 'ucashemoney@gmail.com'
-        email['To'] = recipient
-        email['Subject'] = subject
-
-        email.set_content(
-        message)
-
-        context = ssl.create_default_context()
-
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
-            smtp.login('ucashemoney@gmail.com', 'awyn srnh gpan vfkp')
-            smtp.send_message(email)
+        f"Your child hit your overall monthly budget for {category}.")
 
     
     
