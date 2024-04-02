@@ -1,5 +1,7 @@
 from email.message import EmailMessage
 import smtplib, ssl
+from transaction import Transaction
+
 class UserBase():
 
     #constructors
@@ -11,6 +13,7 @@ class UserBase():
         self.accountNumber = None
         self.email = None
         self.categoriesAndLimits = {}
+        self.transactions=[]
     
 
     #setters
@@ -68,6 +71,15 @@ class UserBase():
     
     def getCategory(self):
         return self.categoriesAndLimits
+    
+    def addTransaction(self, value, category):
+        trans=Transaction(value, category)
+        if category not in self.categoriesAndLimits:
+            return False
+        else:
+            #database work to calculate if amount is over limit after transaction
+            return True
+
     
 
 
