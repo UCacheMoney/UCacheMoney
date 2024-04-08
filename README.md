@@ -67,6 +67,12 @@ py manage.py runserver
 
 [Sequence Diagram Document](https://docs.google.com/document/d/1yEh9zV-HIeAe3J5q3g-41aKqhrKk-SvqcYPNLY2LuTc/edit)
 
+[Configuration Management Plan](https://docs.google.com/document/d/1EcZglRj0Z-DuN3hqywogERWjocxFHNjqQyUkpPzqQbo/edit?usp=sharing)
+
+[Design Patterns Document](https://docs.google.com/document/d/1EGL_DOtcTzFc3odHRod8aukcR28bmnRootjwShHcGx8/edit?usp=sharing)
+
+[Design Class Diagrams](https://docs.google.com/document/d/1RjtTqFcLP4ylUZ-2BzgE--jzeQ9OvnQpidWY6xLHOoU/edit?usp=sharing)
+
 #### Sprint Reviews
 
 [Sprint Review 1](https://docs.google.com/document/d/1S-Inb7vUO44_-xs_tV-LM6QJpmTzbaJD1HKaGt4Isag/edit?usp=sharing)
@@ -75,6 +81,8 @@ py manage.py runserver
 
 [Sprint Review 3](https://docs.google.com/document/d/1Yx03uRsbZC9cNapA1ytxfPZ0w0sQEycc7BFE5HC1Hu8/edit)
 
+[Sprint Review 4](https://docs.google.com/document/d/1uWiDwELVXywDjpyQKtxmpj_rZUUIs_bAIfUTgo0CrhU/edit?usp=sharing)
+
 ### Sprint Backlogs
 
 [Sprint Backlog 1](https://docs.google.com/spreadsheets/d/1_QNFerLnTcCecnEUlYT12kWTd5SogQ1OaE1KwEgU-v4/edit?usp=sharing)
@@ -82,3 +90,5 @@ py manage.py runserver
 [Sprint Backlog 2](https://docs.google.com/spreadsheets/d/1j1Nj3C-z1elPOffaTx_IdnYfya_O6-yKDZMX0aXQaB4/edit?usp=sharing)
 
 [Sprint Backlog 3](https://docs.google.com/spreadsheets/d/1nA4btEHtsjy2wWIYY3zcfa8iY4hvj9c6e-8MBWxqEFg/edit?usp=sharing)
+
+[Sprint Backlog 4](https://docs.google.com/spreadsheets/d/1JeCpgSOh6ObofbEtpMnO1_5AAUuPUZK5-CESi6oQxmo/edit?usp=sharing)
