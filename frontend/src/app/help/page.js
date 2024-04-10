@@ -1,16 +1,12 @@
+"use client";
 import "./Help.css";
-import React from "react"
-import NavbarComponent from "../NavbarComponent/NavbarComponent.js"
+import React, { useState } from "react"
+import NavbarComponent from "../Components/NavbarComponent.js"
 
-export default function login(){
+export default function Help(){
     return( 
-      
-
-
       <>
-      <div>
       <NavbarComponent />
-      </div>
       <main>
         <div className="container">
           <div className="column1">

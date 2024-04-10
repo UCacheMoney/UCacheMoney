@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import "./page.css";
+import NavbarComponent from '../Components/NavbarComponent';
 
 export default function Login() {
     const [username, setUsername] = useState('');
@@ -62,8 +63,8 @@ export default function Login() {
     };
 
     return (
-        <div className="login_page">
-            <div className='login_form'>
+        <>
+            <form onSubmit={handleLogin}>
                 <center>
                     <h1>Log In</h1>
 
@@ -71,12 +72,12 @@ export default function Login() {
                     <input type="text" id="username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} /><br />
 
                     <label htmlFor="password">Password: </label><br />
-                    <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} /><br />
+                    <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/><br />
 
                     <button onClick={handleLogin}>Login</button>
                     <button onClick={handleSignup}>Signup</button>
                 </center>
-            </div>
-        </div>
+            </form>
+       </>
     );
 }
