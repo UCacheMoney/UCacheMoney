@@ -1,11 +1,10 @@
-html, body .login_page { 
-    padding:0%;
-    height: 100%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;}
 
+main {
+    padding: 20px;
+}
+input {
+color: #282828;
+}
 h1 {text-align: center;}
 .form input{
     text-align: center;
@@ -13,3 +12,40 @@ h1 {text-align: center;}
 .form label {
     text-align: center;
 }
+  h2 {
+    margin-top: 30px;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  .question h3 {
+    margin-bottom: 5px;
+  }
+  .column1 {
+  flex: 30%;
+  height:100%;
+  padding: 10px;
+  margin: 5px;
+  background-color: #ffffff;
+  text-align: center;
+  font-family:  Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .column2 {
+  flex: 40%;
+  height: 100%;
+  padding: 10px;
+  margin: 5px;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+  }
+  .container {
+  display: flex;
+  }
+  .justified {
+  display: flex;
+  justify-content: center;
+  }
