@@ -64,6 +64,12 @@ export default function Login() {
 
     return (
         <>
+        <main>
+            <div className='container'>
+                <div className='column1'>
+
+                </div>
+                <div className='column2'>
             <form onSubmit={handleLogin}>
                 <center>
                     <h1>Log In</h1>
@@ -78,6 +84,13 @@ export default function Login() {
                     <button onClick={handleSignup}>Signup</button>
                 </center>
             </form>
+            </div>
+            <div className='column1'>
+                
+            </div>
+            </div>
+            </main>
        </>
+
     );
 }
