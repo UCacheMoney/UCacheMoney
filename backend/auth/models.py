@@ -55,7 +55,7 @@ class User(AbstractUser):
         return self.transactions.all()
 
     def delete_transaction(self, id: str):
-        transaction_to_delete = self.transactions.filter(id=t).first()
+        transaction_to_delete = self.transactions.filter(id=id).first()
 
     def add_transaction(
         self, id: str, amount: decimal, date: datetime.date, category: str
