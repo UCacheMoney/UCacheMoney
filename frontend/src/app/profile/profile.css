@@ -64,16 +64,26 @@ main {
     border-bottom-right-radius: 10px;
   }
 
-  .balChange {
-    color: black;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
+  .spendReport {
+    padding: 5px;
     border-color: black;
     border-radius: 5px;
     margin-top: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
+    font-weight: 400;
+  
+  }
+
+  .spendCatagory {
+    color: black;
+    display: grid;
+    
+    padding: 5px;
+    border-color: black;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
   }
   .balName{
     white-space: no-wrap; 

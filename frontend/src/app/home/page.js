@@ -11,10 +11,13 @@ export default function login(){
 </header>
 <main>
   <section className="navBar">
+    <div href="#">Home</div>
     <div href="#">Profile</div>
     <div href="#">Set Spend Limit</div>
+    <input type="text" id="spendlimit" name="spendlimit"  /><br />
     <div href="#">Set Savings Goal</div>
-    <div href="#">View Child Account</div>
+    <input type="text" id="savegoal" name="savegoal"  /><br />
+    
   </section>
   <section></section>
   <section className="spendReport">

@@ -20,14 +20,20 @@ export default function login(){
   <section></section>
   <section className="spendReport">
     <div>Name: Fred Czerwinski</div>
+    <div>Total Spend:</div>
+    <div>200</div>
     <div>Catagories:</div>
     <div className="spendCatagory">
-      <div>Catagory</div>
-      <div>200/200</div>
+      <div>Catagory #1</div>
+      <div>20/200</div>
+    </div>
+    <div className="spendCatagory">
+      <div>Catagory #2</div>
+      <div>180/200</div>
     </div>
     
 
-    <div>Name: Fred Czerwinski</div>
+    
   </section>
 </main>
 </div>
