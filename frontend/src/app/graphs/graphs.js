@@ -2,12 +2,14 @@
 
 class BarGraphObserver{
     constructor(){
-
+       self.graph= null 
     }
 
+    display(type){
+        if (type!="Bar"){
 
-    display(){
-        
+        }
+        else{
         const BarGraph = new Chart("BarGraph", {
             type: "bar",
             data: {
@@ -19,25 +21,52 @@ class BarGraphObserver{
             },
             options: {}
         });
+        return BarGraph
+    }
     }
 
 }
 
 class PieGraphObserver{
+    constructor(){
+        self.graph = null
+    }
+    display(type){
+        if (type!="Pie"){
 
+        }
+        else{
+            const PieGraph = new Chart("PieGraph", {
+                type: "pie",
+                data: {
+                    labels: label, 
+                },
+                options: {}
+            })
+        return PieGraph
+    }
+}
 }
 
 class LineGraphObserver{
-    
-    display(){
-    const LineChart = new Chart("LineChart",{
-        type: "line",
-        data: {
-            labels: label ,
-    
-        },
-        options: {}
-    });
+    constructor(){
+        self.graph = null
+    }
+    display(type){
+        if (type!="Line"){
+
+        }
+        else{
+            const LineChart = new Chart("LineChart",{
+                type: "line",
+                data: {
+                    labels: label ,
+            
+                },
+                options: {}
+            });
+        }
+        return LineChart
 }
 }
 
@@ -47,10 +76,3 @@ function getMonthsTransactions(){
 
 }
 const TransactionList = getMonthsTransactions();
-
-
-let colors =['red', 'blue', 'green', 'purple', 'yellow', 'orange', 'black', 'pink'];
-let dates = []
-let categories = {category: "name", amount: 500}
-
-

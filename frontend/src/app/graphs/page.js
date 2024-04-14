@@ -14,30 +14,33 @@ class Observable{ //creating Observable class to alert observers
     }
 
     notify(data){
-        this.observers.forEach((observer) => observer(data))
+        for(i = 0; i != (this.observers).length; i++){
+            (this.observers[i]).display(data)
+        }
     }
 }
+
 Observable.addObj(BarGraphObserver)
-Observable.addObj(PieGraphObserver)
+Observable.addObj(PieGraphObserver)//adds each subclass to the observable list
 Observable.addObj(LineGraphObserver)
 
 export default function GraphPage(){
-    function scatterClicked(){
-        Observable.notify("scatterPlot")
+    function pieClicked(){
+        Observable.notify("Pie")
     }
 
     function lineClicked(){
-        Observable.notify("LineGraph")
+        Observable.notify("Line")
     }
 
     function barClicked(){
-        Observable.notify("BarGraph")
+        Observable.notify("Bar")
     }
 
     return (
     <div className="Graph Page">
         <a>You are on the class page</a>
-        <Button onClick={scatterClicked}>Scatter Plot</Button>
+        <Button onClick={pieClicked}>Scatter Plot</Button>
         <Button onClick={lineClicked}>Line Graph</Button>
         <Button onClick={barClicked}>Bar Graph</Button>
     </div>
