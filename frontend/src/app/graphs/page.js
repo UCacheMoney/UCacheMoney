@@ -1,3 +1,5 @@
+import {BarGraphObserver, PieGraphObserver, LineGraphObserver} from './graphs'
+
 class Observable{ //creating Observable class to alert observers
     constructor() {
         this.observers = [];
@@ -15,6 +17,9 @@ class Observable{ //creating Observable class to alert observers
         this.observers.forEach((observer) => observer(data))
     }
 }
+Observable.addObj(BarGraphObserver)
+Observable.addObj(PieGraphObserver)
+Observable.addObj(LineGraphObserver)
 
 export default function GraphPage(){
     function scatterClicked(){
