@@ -10,6 +10,7 @@ class BarGraphObserver{
 
         }
         else{
+        
         const BarGraph = new Chart("BarGraph", {
             type: "bar",
             data: {
