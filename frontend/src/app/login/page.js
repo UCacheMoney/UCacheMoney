@@ -64,6 +64,7 @@ export default function Login() {
 
     return (
         <>
+       < NavbarComponent/>
         <main>
             <div className='container'>
                 <div className='column1'>
