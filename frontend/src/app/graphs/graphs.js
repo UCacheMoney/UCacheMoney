@@ -1,8 +1,36 @@
+function setUp(categories, labels){
+    
+    const actions = [{
+        //chart represents the graph and categories passed in from the database
+            addData(chart){
+                const data = chart.data
+                const datasetColor = Utils.namedColor(chart.data.datasets.length);
+                const newDataset = {
+                    label: labels[data.datasets.length],
+                    backgroundColor: Utils.transparentize(datasetColor, 0.5),
+                    borderColor: datasetColor,
+                    borderWidth: 1,
+                    data: Utils.numbers({count: data.labels.length, min: -100, max: 100}),
+                };
+                chart.data.datasets.push(newDataset)
+                chart.update();
+            }
 
+    }
+    ]
+}
 
 class BarGraphObserver{
     constructor(){
-       self.graph= null 
+        const BarGraph = new Chart("BarGraph", {
+            type: "bar",
+            data: {
+                labels: "None",
+                datasets: []
+            },
+            options: {}
+        });
+    this.graph=BarGraph
     }
 
     display(type){
@@ -10,22 +38,15 @@ class BarGraphObserver{
 
         }
         else{
-        
-        const BarGraph = new Chart("BarGraph", {
-            type: "bar",
-            data: {
-                labels: categories.map(row => row.category),
-                datasets: [{
-                    label: "Categories",
-                    data: categories.map(row => row.amount),
-                }]
-            },
-            options: {}
-        });
-        return BarGraph
-    }
+            const graph = new BarGraph();
+            for (i = 0; i < categories.length; i++){
+                categories, spending, limit = getMonthsTransactions()
+                addData(graph, labels)
+            }
+            return graph
     }
 
+}
 }
 
 class PieGraphObserver{
@@ -73,7 +94,9 @@ class LineGraphObserver{
 
 function getMonthsTransactions(){
     const moment = require('moment');
-    //retrieve transactions from backend
-
+    let categories = []
+    let spending = []
+    let limits = []
+//retrieve transactions from backend
+    return categories, spending, limits
 }
-const TransactionList = getMonthsTransactions();

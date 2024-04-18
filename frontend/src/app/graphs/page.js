@@ -18,6 +18,14 @@ class Observable{ //creating Observable class to alert observers
             (this.observers[i]).display(data)
         }
     }
+
+    getData(){
+
+    }
+
+    addDataset(){
+        
+    }
 }
 
 Observable.addObj(BarGraphObserver)
