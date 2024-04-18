@@ -17,6 +17,7 @@ export default function login(){
     <input type="text" id="spendlimit" name="spendlimit"  /><br />
     <div href="#">Set Savings Goal</div>
     <input type="text" id="savegoal" name="savegoal"  /><br />
+    <div href="#">Logout</div>
     
   </section>
   <section></section>
