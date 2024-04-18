@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import "./page.css";
-import NavbarComponent from '../Components/NavbarComponent';
+import NavbarComponent from '../components/NavbarComponent';
 
 export default function Login() {
     const [username, setUsername] = useState('');
