@@ -1,3 +1,5 @@
+import Chart from 'chart.js/auto'
+
 class BarGraphObserver{
     constructor(){
         const BarGraph = new Chart("BarGraph", {
@@ -43,7 +45,7 @@ class BarGraphObserver{
 
 class PieGraphObserver{
     constructor(){
-        self.graph = null
+        this.graph = null
     }
     display(type){
         if (type!="Pie"){
@@ -64,7 +66,7 @@ class PieGraphObserver{
 
 class LineGraphObserver{
     constructor(){
-        self.graph = null
+        this.graph = null
     }
     display(type){
         if (type!="Line"){
@@ -90,5 +92,10 @@ function getMonthsTransactions(){
     let spending = []
     let limits = []
 //retrieve transactions from backend
+    categories = ['Gas', 'Food', 'Rent', 'Fun']
+    spending = [300, 200, 1000, 54]
+    limits = [500, 300, 1500, 100]
     return categories, spending, limits
 }
+
+export {BarGraphObserver, PieGraphObserver, LineGraphObserver}

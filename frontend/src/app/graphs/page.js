@@ -19,22 +19,25 @@ class Observable{ //creating Observable class to alert observers
         }
     }
 }
-
-Observable.addObj(BarGraphObserver)
-Observable.addObj(PieGraphObserver)//adds each subclass to the observable list
-Observable.addObj(LineGraphObserver)
+const Observer = new Observable()
+const BarObserver = new BarGraphObserver()
+const LineObserver = new LineGraphObserver()
+const PieObserver = new PieGraphObserver()
+Observer.addObj(BarObserver)
+Observer.addObj(LineObserver)//adds each subclass to the observable list
+Observer.addObj(PieObserver)
 
 export default function GraphPage(){
     function pieClicked(){
-        Observable.notify("Pie")
+        Observer.notify("Pie")
     }
 
     function lineClicked(){
-        Observable.notify("Line")
+        Observer.notify("Line")
     }
 
     function barClicked(){
-        Observable.notify("Bar")
+        Observer.notify("Bar")
     }
 
     return (
@@ -42,11 +45,11 @@ export default function GraphPage(){
         <a>You are on the graph page</a>
         <main>
             <section className="body">
-                <div style = "width: 600px;"><canvas id="graphs"></canvas></div>
+                <div style ={{width: "600px"}}><canvas id="graphs"></canvas></div>
                 <script type="module" src="graphs.js"></script>
-                <Button onClick={pieClicked}>Scatter Plot</Button>
-                <Button onClick={lineClicked}>Line Graph</Button>
-                <Button onClick={barClicked}>Bar Graph</Button>
+                <button onClick={pieClicked()}>Scatter Plot</button>
+                <button onClick={lineClicked()}>Line Graph</button>
+                <button onClick={barClicked()}>Bar Graph</button>
             </section>
         </main>
     </div>
