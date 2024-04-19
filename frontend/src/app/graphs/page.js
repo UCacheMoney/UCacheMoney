@@ -18,14 +18,6 @@ class Observable{ //creating Observable class to alert observers
             (this.observers[i]).display(data)
         }
     }
-
-    getData(){
-
-    }
-
-    addDataset(){
-        
-    }
 }
 
 Observable.addObj(BarGraphObserver)
@@ -47,10 +39,16 @@ export default function GraphPage(){
 
     return (
     <div className="Graph Page">
-        <a>You are on the class page</a>
-        <Button onClick={pieClicked}>Scatter Plot</Button>
-        <Button onClick={lineClicked}>Line Graph</Button>
-        <Button onClick={barClicked}>Bar Graph</Button>
+        <a>You are on the graph page</a>
+        <main>
+            <section className="body">
+                <div style = "width: 600px;"><canvas id="graphs"></canvas></div>
+                <script type="module" src="graphs.js"></script>
+                <Button onClick={pieClicked}>Scatter Plot</Button>
+                <Button onClick={lineClicked}>Line Graph</Button>
+                <Button onClick={barClicked}>Bar Graph</Button>
+            </section>
+        </main>
     </div>
     );
 }

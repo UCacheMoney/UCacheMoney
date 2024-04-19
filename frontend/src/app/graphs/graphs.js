@@ -1,25 +1,3 @@
-function setUp(categories, labels){
-    
-    const actions = [{
-        //chart represents the graph and categories passed in from the database
-            addData(chart){
-                const data = chart.data
-                const datasetColor = Utils.namedColor(chart.data.datasets.length);
-                const newDataset = {
-                    label: labels[data.datasets.length],
-                    backgroundColor: Utils.transparentize(datasetColor, 0.5),
-                    borderColor: datasetColor,
-                    borderWidth: 1,
-                    data: Utils.numbers({count: data.labels.length, min: -100, max: 100}),
-                };
-                chart.data.datasets.push(newDataset)
-                chart.update();
-            }
-
-    }
-    ]
-}
-
 class BarGraphObserver{
     constructor(){
         const BarGraph = new Chart("BarGraph", {
@@ -47,6 +25,20 @@ class BarGraphObserver{
     }
 
 }
+    //chart represents the graph and categories passed in from the database
+    addData(chart){
+        const data = chart.data
+        const datasetColor = Utils.namedColor(chart.data.datasets.length);
+        const newDataset = {
+            label: labels[data.datasets.length],
+            backgroundColor: Utils.transparentize(datasetColor, 0.5),
+            borderColor: datasetColor,
+            borderWidth: 1,
+            data: Utils.numbers({count: data.labels.length, min: 0, max: 5000}),//where values will go
+        };
+        chart.data.datasets.push(newDataset)
+        chart.update();
+    }
 }
 
 class PieGraphObserver{
