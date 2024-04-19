@@ -14,7 +14,7 @@ class Observable{ //creating Observable class to alert observers
     }
 
     notify(data){
-        for(i = 0; i != (this.observers).length; i++){
+        for(let i = 0; i != (this.observers).length; i++){
             (this.observers[i]).display(data)
         }
     }
