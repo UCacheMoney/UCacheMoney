@@ -7,6 +7,7 @@ import SearchBar from './searchBar';
 
 
 const NavbarComponent = () => {
+
   return (
     <nav>
       <a href='#'>
@@ -24,7 +25,7 @@ const NavbarComponent = () => {
         <ul id='navbar'>
           <li><a href="#"> Account </a> </li>
           <li><a href="#"> Contact </a> </li>
-          <li><a className= "active" href="#"> Help </a> </li>         
+          <li><a className= "active" href="#"> Help </a> </li> 
         </ul>
       </div>
     </nav>
