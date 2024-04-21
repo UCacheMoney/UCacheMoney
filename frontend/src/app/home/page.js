@@ -16,11 +16,11 @@ export default function home(){
       .res(() => {
         removeTokens();
 
-        router.push("/home");
+        router.push("/login");
       })
       .catch(() => {
         removeTokens();
-        router.push("/home");
+        router.push("/login");
       });
   };
     return( 

@@ -27,12 +27,13 @@ const Login = () => {
     const { login, storeToken } = AuthActions();
   
     const onSubmit = (data) => {
+
       login(data.email, data.password)
         .json((json) => {
           storeToken(json.access, "access");
           storeToken(json.refresh, "refresh");
   
-          router.push("home");
+          router.push("/home");
         })
         .catch((err) => {
           setError("root", { type: "manual", message: err.json.detail });
