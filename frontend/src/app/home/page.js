@@ -1,4 +1,7 @@
+import SIDENAV from "../Components/sideNav";
 import "./home.css";
+
+
 
 export default function login(){
     return( 
@@ -10,23 +13,16 @@ export default function login(){
   </section>
 </header>
 <main>
-  <section className="navBar">
-    <div href="#">Home</div>
-    <div href="#">Profile</div>
-    <div href="#">Set Spend Limit</div>
-    <input type="text" id="spendlimit" name="spendlimit"  /><br />
-    <div href="#">Set Savings Goal</div>
-    <input type="text" id="savegoal" name="savegoal"  /><br />
-    <div href="#">Logout</div>
-    
-  </section>
+
+  <SIDENAV/>
+  
   <section></section>
   <section className="spendReport">
     <div className="balChange increase">
       <a className="balName">Walmartaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
       <a className="balAmount">+$50.00</a>
     </div>
-
+      
     <div className="balChange decrease">
       <a className="balName">Shell</a>
       <a className="balAmount">-$50.00</a>
