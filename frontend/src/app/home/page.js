@@ -1,4 +1,9 @@
 "use client";
+import SIDENAV from "../Components/sideNav";
+import "./home.css";
+
+export default function login(){
+
 
 import useSWR from "swr";
 import { fetcher } from "@/app/fetcher";
@@ -32,19 +37,16 @@ export default function home(){
   </section>
 </header>
 <main>
-  <section className="navBar">
-    <div href="#">Profile</div>
-    <div href="#">Set Spend Limit</div>
-    <div href="#">Set Savings Goal</div>
-    <div href="#">View Child Account</div>
-  </section>
+
+  <SIDENAV/>
+  
   <section></section>
   <section className="spendReport">
     <div className="balChange increase">
       <a className="balName">Walmartaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
       <a className="balAmount">+$50.00</a>
     </div>
-
+      
     <div className="balChange decrease">
       <a className="balName">Shell</a>
       <a className="balAmount">-$50.00</a>
