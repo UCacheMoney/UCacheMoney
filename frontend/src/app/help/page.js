@@ -1,7 +1,7 @@
 "use client";
 import "./Help.css";
 import React, { useState } from "react"
-import NavbarComponent from "../Components/NavbarComponent.js"
+import NavbarComponent from "../components/NavbarComponent.js"
 
 export default function Help(){
     return( 
