@@ -3,95 +3,101 @@
 import { useState } from 'react';
 import "./page.css";
 import NavbarComponent from '../components/NavbarComponent';
+import React from "react";
+import { useForm } from "react-hook-form";
+import { AuthActions } from "@/app/auth/utils";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
-export default function Login() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+const formData = {
+    email: "",
+    password: "",
+};
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-
-        try {
-            // Call the Django backend API to check login
-            const response = await fetch('http://localhost:8000/auth/login/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password }),
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                // Successful login
-                console.log('Login successful!');
-            } else {
-                // Handle login failure, show error message, etc.
-                console.log('Login failed. Please check your credentials.');
-            }
-        } catch (error) {
-            console.error('Error during login:', error);
-        }
-    };
-
-    const handleSignup = async (e) => {
-        e.preventDefault()
-
-        try {
-            // Call the Django backend API to check login
-            const response = await fetch('http://localhost:8000/auth/signup/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password }),
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                // Successful login
-                console.log('Signup successful!');
-            } else {
-                // Handle login failure, show error message, etc.
-                console.log('Signup failed.');
-            }
-        } catch (error) {
-            console.error('Error during signup:', error);
-        }
+const Login = () => {
+    const {
+      register,
+      handleSubmit,
+      formState: { errors },
+      setError,
+    } = useForm();
+  
+    const router = useRouter();
+  
+    const { login, storeToken } = AuthActions();
+  
+    const onSubmit = (data) => {
+      login(data.email, data.password)
+        .json((json) => {
+          storeToken(json.access, "access");
+          storeToken(json.refresh, "refresh");
+  
+          router.push("home");
+        })
+        .catch((err) => {
+          setError("root", { type: "manual", message: err.json.detail });
+        });
     };
 
     return (
         <>
         <NavbarComponent/>
         <main>
-            <div className='container'>
-                <div className='column1'>
-
-                </div>
-                <div className='column2'>
-            <form onSubmit={handleLogin}>
-                <center>
-                    <h1>Log In</h1>
-
-                    <label htmlFor="username">Username: </label><br />
-                    <input type="text" id="username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} /><br />
-
-                    <label htmlFor="password">Password: </label><br />
-                    <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/><br />
-
-                    <button onClick={handleLogin}>Login</button>
-                    <button onClick={handleSignup}>Signup</button>
-                </center>
-            </form>
-            </div>
-            <div className='column1'>
-                
-            </div>
-            </div>
-            </main>
+        <div className="">
+      <div className="">
+        <h3 className="">Login to your account</h3>
+        <form onSubmit={handleSubmit(onSubmit)} className="">
+          <div>
+            <label className="block" htmlFor="email">
+              Username
+            </label>
+            <input
+              type="text"
+              placeholder="Email"
+              {...register("email", { required: true })}
+              className=""
+            />
+            {errors.email && (
+              <span className="">Username is required</span>
+            )}
+          </div>
+          <div className="mt-4">
+            <label className="block" htmlFor="password">
+              Password
+            </label>
+            <input
+              type="password"
+              placeholder="Password"
+              {...register("password", { required: true })}
+              className=""
+            />
+            {errors.password && (
+              <span className="">Password is required</span>
+            )}
+          </div>
+          <div className="">
+            <button className="">
+              Login
+            </button>
+          </div>
+          {errors.root && (
+            <span className="">{errors.root.message}</span>
+          )}
+        </form>
+        <div className="">
+          <Link
+            href="/auth/password/reset-password"
+            className="text-sm text-blue-600 hover:underline"
+          >
+            Forgot password?
+          </Link>
+        </div>
+      </div>
+    </div>
+      </main>
        </>
 
     );
 }
+
+export default Login;
