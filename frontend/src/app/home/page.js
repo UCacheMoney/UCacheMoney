@@ -1,8 +1,6 @@
 "use client";
-import SIDENAV from "../Components/sideNav";
+import SIDENAV from "../components/sideNav";
 import "./home.css";
-
-export default function login(){
 
 
 import useSWR from "swr";
