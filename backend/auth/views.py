@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.contrib.auth.models import User
 
 # Create your views here.
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -23,3 +25,12 @@ class LogoutView(APIView):
             return Response(status=status.HTTP_200_OK)
         except (ObjectDoesNotExist, TokenError):
             return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+class NotificationManager:
+    def spending_limit_email(self, user: User):
+        subject = "Approaching spending limit!"
+        message = "You are approaching your weekly spending limit"
+        from_email = "ucache@example.com"
+
+        send_mail(subject, message, from_email, [user.email])
