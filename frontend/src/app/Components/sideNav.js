@@ -4,12 +4,13 @@ import React from 'react';
 const SIDENAV = () => {
     return (
         <section className="navBar">
-            <div><a href="../home">Home</a></div>
-            <div><a href="../profile">Profile</a></div>
+            <div>
+                Balance: $200.00
+            </div>
             <div>Set Spend Limit</div>
-            <input type="text" id="spendlimit" name="spendlimit"  /><br />
+            <input type="text" id="spendlimit" name="spendlimit" style={{width: "150px"}}  /><br />
             <div href="#">Set Savings Goal</div>
-            <input type="text" id="savegoal" name="savegoal"  /><br />
+            <input type="text" id="savegoal" name="savegoal" style={{width: "150px"}} /><br />
             <div> <a href="../login">Logout</a></div>
         </section>
     );

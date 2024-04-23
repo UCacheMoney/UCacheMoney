@@ -20,6 +20,13 @@ nav {
   padding: 10px;
 
 }
+.balance{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #282828;
+  align-items: center;
+}
 
 .logo_link img {
   height: auto;

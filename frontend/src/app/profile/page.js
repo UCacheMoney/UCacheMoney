@@ -1,15 +1,14 @@
 import "./profile.css";
-import SIDENAV from "../Components/sideNav";
+import SIDENAV from "../components/sideNav";
+import NavbarComponent from "../components/NavbarComponent";
 
 export default function login(){
     return( 
+
+<>
+<NavbarComponent/>
+<div className="container">
 <div className="home-page">
-<header>
-  <div>Ucache$ - Profile</div>
-  <section class="balance">
-    <div>Balance: $2000.00</div>
-  </section>
-</header>
 <main>
   
   
@@ -34,5 +33,7 @@ export default function login(){
   </section>
 </main>
 </div>
+</div>
+</>
     );
 }
