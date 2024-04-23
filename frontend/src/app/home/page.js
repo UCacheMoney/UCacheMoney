@@ -1,6 +1,7 @@
 "use client";
 import SIDENAV from "../components/sideNav";
 import "./home.css";
+import NavbarComponent from "../components/NavbarComponent";
 
 
 import useSWR from "swr";
@@ -27,13 +28,11 @@ export default function home(){
       });
   };
     return( 
+      <>
+      <NavbarComponent/>
+      <div className="container">
 <div className="home-page">
-<header>
-  <div>Ucache$ - Home</div>
-  <section className="balance">
-    <div>Balance: $2000.00</div>
-  </section>
-</header>
+
 <main>
 
   <SIDENAV/>
@@ -132,5 +131,7 @@ export default function home(){
   </section>
 </main>
 </div>
+</div>
+</>
     );
 }

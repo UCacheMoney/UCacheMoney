@@ -9,7 +9,7 @@ const NavbarComponent = () => {
 
   return (
     <nav>
-      <a href='#'>
+      <a href='../home'>
         <Image
           src={logo}
           width={72}
@@ -19,8 +19,8 @@ const NavbarComponent = () => {
      </a>
       <div>
         <ul id='navbar'>
-          <li><a href="#"> Account </a> </li>
-          <li><a href="#"> Contact </a> </li>
+          <li><a href="../profile"> Profile </a> </li>
+          <li><a href="../login"> Login </a> </li>
           <li><a className= "active" href="#"> Help </a> </li> 
         </ul>
       </div>
