@@ -19,9 +19,9 @@ useEffect(() => {
     let BarGraph = new Chart(ctx, {
         type: "bar",
         data: {
-            labels: "categories",
+            labels: categories,
             datasets: [{
-                label: categories,
+                label: "Categories",
 
                 data: spending,
 
