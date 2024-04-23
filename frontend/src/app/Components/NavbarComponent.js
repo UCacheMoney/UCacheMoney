@@ -20,8 +20,8 @@ const NavbarComponent = () => {
       <div>
         <ul id='navbar'>
           <li><a href="../profile"> Profile </a> </li>
-          <li><a href="../login"> Login </a> </li>
-          <li><a className= "active" href="#"> Help </a> </li> 
+          <li><a href="../help"> Help </a> </li>
+          <li><a className= "active" href="../login"> Login </a> </li> 
         </ul>
       </div>
     </nav>
