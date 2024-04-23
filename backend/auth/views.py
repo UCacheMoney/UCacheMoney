@@ -1,72 +1,36 @@
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import render
+from django.core.mail import send_mail
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
-from django.views.decorators.http import require_http_methods
-import json
+
+# Create your views here.
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.exceptions import TokenError
+from rest_framework.views import APIView
+from rest_framework.permissions import AllowAny
+from rest_framework import status
+from rest_framework.response import Response
+
+from django.core.exceptions import ObjectDoesNotExist
 
 
-@require_http_methods(["POST", "OPTIONS"])
-@csrf_exempt  # Use csrf_exempt for simplicity; consider using CSRF protection in production
-def login_user(request):
-    if request.method == "POST":
-        # Parse the JSON data from the request body
-        data = json.loads(request.body.decode("utf-8"))
+class LogoutView(APIView):
+    permission_classes = (AllowAny,)
+    authentication_classes = ()
 
-        # Retrieve username and password from the JSON data
-        username = data.get("username")
-        password = data.get("password")
-
-        # Perform authentication logic here (e.g., check credentials against database)
-        # Replace the following logic with your actual authentication logic
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return JsonResponse({"success": True})
-        else:
-            return JsonResponse({"success": False})
-    return JsonResponse({"error": "Invalid request method"})
-
-
-@require_http_methods(["POST", "OPTIONS"])
-@csrf_exempt
-def signup(request):
-    if request.method == "POST":
+    def post(self, request):
         try:
-            # Parse the JSON data from the request body
-            data = json.loads(request.body.decode("utf-8"))
-
-            # Retrieve username and password from the JSON data
-            username = data.get("username")
-            password = data.get("password")
-
-            # create user with username and password
-            # None is email, could change with time
-            user = User.objects.create_user(username, None, password)
-            user.save()
-            return JsonResponse({"success": True})
-        except:
-            return JsonResponse({"success": False})
-    return JsonResponse({"error": "Invalid request method"})
+            refresh_token = request.data["refresh"]
+            token = RefreshToken(refresh_token)
+            token.blacklist()
+            return Response(status=status.HTTP_200_OK)
+        except (ObjectDoesNotExist, TokenError):
+            return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
-@require_http_methods(["POST", "OPTIONS"])
-@csrf_exempt
-@login_required
-def reset_password(request):
-    pass
+class NotificationManager:
+    def spending_limit_email(self, user: User):
+        subject = "Approaching spending limit!"
+        message = "You are approaching your weekly spending limit"
+        from_email = "ucache@example.com"
 
-
-@require_http_methods(["POST", "OPTIONS"])
-@csrf_exempt
-@login_required
-def delete_account(request):
-    pass
-
-
-@require_http_methods(["POST", "OPTIONS"])
-@csrf_exempt
-@login_required
-def logout(request):
-    pass
+        send_mail(subject, message, from_email, [user.email])

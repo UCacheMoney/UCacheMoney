@@ -1,8 +1,9 @@
 desktop.ini
 .DS_Store
 
-# Environment
+# Environments
 .env
+env/
 
 # Django Stuff
 *.log
