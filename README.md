@@ -45,7 +45,7 @@ py manage.py runserver
 
 [SRS Document](https://docs.google.com/document/d/14fgQ0AwsQVTAxBBHwCJlFB6ag8yT-BruFjg6DEkIlVU/edit?usp=sharing)
 
-[Genral Overview](https://docs.google.com/document/d/1LzCNA0ghvf35a_ousWIhqGxSMrdQHxF9qWZdXXDsp2A/edit?usp=sharing)
+[General Overview](https://docs.google.com/document/d/1LzCNA0ghvf35a_ousWIhqGxSMrdQHxF9qWZdXXDsp2A/edit?usp=sharing)
 
 [Product Backlog](https://docs.google.com/spreadsheets/d/1B0ROaNWCcYXQJFtDmBq3dkEd729iXnHrc0MA3zfctGY/edit?usp=sharing)
 
