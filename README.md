@@ -26,18 +26,30 @@ npm run dev
 
 #### Run Backend
 
+Python 3.12 is reccomended, other versions are not tested but may work
+
 Change directory into the backend `cd backend` then:
 
 Unix:
 ```
-python -m pip install -r requirements.txt
+python -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
 python manage.py runserver
 ```
 Windows:
 ```
-py -m pip install -r requirements.txt
+py -m venv env
+.\env\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
 py manage.py runserver
 ```
+
+To quit virtual environment: `deactivate`
 
 ### Documents
 
